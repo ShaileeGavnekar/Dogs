@@ -1,25 +1,32 @@
-import logo from './logo.svg';
+import React,{useState} from 'react';
 import './App.css';
+import data from './data';
+import Dogs from './Components/Dogs';
 
 function App() {
+    const [dogs,setDogs]=useState(data);
+
+    function removedog(id){
+          const newdog=dogs.filter(dog=>dog.id !==id);
+          setDogs(newdog);
+    }
+    if(dogs.length===0){
+      return(
+        <div>
+          <div className='no-option'>
+            <h2 >No Options Left</h2>
+            <button className='refresh-button' onClick={()=>setDogs(data)}>Refresh</button>
+          </div>
+        </div>
+      )
+    }
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className='App'>
+      <Dogs dogs={dogs} removedog={removedog}></Dogs>
     </div>
   );
 }
 
 export default App;
+
+
