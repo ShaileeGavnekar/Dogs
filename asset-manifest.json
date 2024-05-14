@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/PetDogs/static/css/main.82e67d13.css",
+    "main.js": "/PetDogs/static/js/main.e52bdaf0.js",
+    "index.html": "/PetDogs/index.html",
+    "main.82e67d13.css.map": "/PetDogs/static/css/main.82e67d13.css.map",
+    "main.e52bdaf0.js.map": "/PetDogs/static/js/main.e52bdaf0.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.82e67d13.css",
+    "static/js/main.e52bdaf0.js"
+  ]
+}
